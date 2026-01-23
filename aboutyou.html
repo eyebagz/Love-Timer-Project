@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+  (function () {
+    const theme = localStorage.getItem("theme") || "dark";
+    document.documentElement.className = theme;
+  })();
+</script>
+  <link rel="stylesheet" href="style.css">
+  <title>Message</title>
+</head>
+<body class="fade-page">
+
+  <div class="menu">
+    <button class="menu-btn">☰</button>
+    <div class="menu-content">
+      <a href="index.html" data-link>Timer</a>
+      <a href="message.html" data-link>Message</a>
+      <a href="about.html" data-link>About Us</a>
+      <hr />
+      <button id="themeToggle">Toggle Dark / Light</button>
+    </div>
+  </div>
+
+  <div class="clock-container">
+    <h1>Things I love about you</h1>
+    <p>Soon to have the full list of things I love about you.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

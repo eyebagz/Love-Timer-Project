@@ -1,0 +1,149 @@
+:root {
+  --bg-dark: #181818;
+  --bg-light: #F5F5DC;
+  --text-dark: #008080;
+  --text-light: #008080;
+  --menu-dark: #222222;
+  --menu-light: #F5F5DC;
+  --menu-hover-dark: #222222;
+  --menu-hover-light: #b9b9a7;
+}
+
+/* -------- PAGE FADE -------- */
+.fade-page {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+
+/* -------- THEMES -------- */
+html.dark body {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+html.light body {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* -------- CLOCK -------- */
+.clock-container {
+  text-align: center;
+}
+
+.digital-clock {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: clamp(2rem, 8vw, 4rem);
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clock-number {
+  transition: opacity 0.3s;
+}
+
+.label {
+  font-size: 0.7rem;
+  opacity: 0.7;
+}
+
+.colon {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* -------- MENU -------- */
+.menu {
+  position: fixed;
+  top: calc(15px + env(safe-area-inset-top));
+  right: calc(15px + env(safe-area-inset-right));
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.85);
+}
+
+.menu-content.open {
+  display: block;
+}
+
+html.light .menu-content {
+  background: #ddd;
+}
+
+.menu-content a,
+.menu-content button {
+  display: block;
+  padding: 8px;
+  text-decoration: none;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html.dark .menu-content a:hover,
+html.dark .menu-content button:hover {
+  background: var(--menu-hover-dark);
+}
+
+html.light .menu-content a:hover,
+html.light .menu-content button:hover {
+  background: var(--menu-hover-light);
+}
+
+/* -------- HEARTBEAT PULSE -------- */
+.heartbeat {
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%   { transform: scale(1); }
+  15%  { transform: scale(1.04); }
+  30%  { transform: scale(1); }
+  100% { transform: scale(1); }
+}
