@@ -1,2 +1,4 @@
-# Love-Timer-Project
+# Love Timer Project
 This was a personal project, I made this project for my girlfriend to access the website. 
+
+Link: https://eyebagz.github.io/Love-Timer-Project/
