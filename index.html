@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Our Time</title>
   <script>
-  (function () {
-    const theme = localStorage.getItem("theme") || "dark";
-    document.documentElement.className = theme;
-  })();
-</script>
+    (function () {
+      const theme = localStorage.getItem("theme") || "dark";
+      document.documentElement.className = theme;
+    })();
+  </script>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="fade-page">
 
   <div class="menu">
@@ -40,11 +42,16 @@
       <span id="seconds" class="clock-number">00</span>
       <span class="label">SECONDS</span>
     </div>
-    <p>I tried making the timer as accurate as possible, though it may be completely wrong.</p>
-    <p>I wanted to make this for you to show you how much I love you and always will</p>
-    <p>-- Emily</p>
+    <div class="note">
+      <h1>Since August 13, 2025</h1>
+      <p>I tried making the timer as accurate as possible, though it may be completely wrong.</p>
+      <p>I wanted to make this for you to show you how much I love you and always will</p>
+      <p>-- Emily</p>
+    </div>
+  </div>
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>

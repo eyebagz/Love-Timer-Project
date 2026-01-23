@@ -1,8 +1,8 @@
 :root {
   --bg-dark: #181818;
-  --bg-light: #F5F5DC;
-  --text-dark: #008080;
-  --text-light: #008080;
+  --bg-light: #F3EEDC;
+  --text-dark: #28a99e;
+  --text-light: #28a99e;
   --menu-dark: #222222;
   --menu-light: #F5F5DC;
   --menu-hover-dark: #222222;
@@ -38,7 +38,7 @@ html.light body {
   color: var(--text-light);
 }
 
-body {
+body {  
   margin: 0;
   height: 100vh;
   font-family: "Courier New", monospace;
@@ -57,7 +57,7 @@ body {
   display: flex;
   gap: 20px;
   align-items: center;
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: 80px;
 }
 
 .unit {
@@ -71,12 +71,22 @@ body {
 }
 
 .label {
-  font-size: 0.7rem;
+  font-size: 20px;
   opacity: 0.7;
 }
 
 .colon {
   animation: blink 1s infinite;
+}
+
+.note h1 {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.note p {
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 @keyframes blink {
@@ -91,7 +101,7 @@ body {
 }
 
 .menu-btn {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   background: none;
   border: none;
   color: inherit;
@@ -103,8 +113,10 @@ body {
   position: absolute;
   right: 0;
   padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 8px;
-  background: rgba(0,0,0,0.85);
+  background: #131313;
 }
 
 .menu-content.open {
@@ -112,13 +124,23 @@ body {
 }
 
 html.light .menu-content {
-  background: #ddd;
+  background: #F5F5DC ;
+  opacity: 60%;
 }
 
-.menu-content a,
-.menu-content button {
+.menu-content a{
+  font-size: 13px;
   display: block;
   padding: 8px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
+
+.menu-content button {
+  font-size: 13px;
+  text-align: center;
+  display: block;
   text-decoration: none;
   color: inherit;
   background: none;
