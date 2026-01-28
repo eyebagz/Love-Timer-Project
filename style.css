@@ -53,6 +53,10 @@ body {
   text-align: center;
 }
 
+.clock-container p {
+  font-size: 18px;
+}
+
 .digital-clock {
   display: flex;
   gap: 20px;
